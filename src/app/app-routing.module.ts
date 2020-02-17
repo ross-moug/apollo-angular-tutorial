@@ -1,12 +1,6 @@
-import { NewCommand } from "@angular/cli/commands/new-impl";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { CommentPageComponent } from "./comment-page/comment-page.component";
 import { ExchangeRatesComponent } from "./exchange-rates/exchange-rates.component";
-import { AsyncFeedComponent } from "./async-feed/async-feed.component";
-import { NewEntryComponent } from "./new-entry/new-entry.component";
-import { ProfileComponent } from "./profile/profile.component";
-import { RxjsFeedComponent } from "./rxjs-feed/rxjs-feed.component";
 
 const routes: Routes = [
   {
@@ -14,24 +8,16 @@ const routes: Routes = [
     component: ExchangeRatesComponent
   },
   {
-    path: "queries",
-    component: ProfileComponent,
+    path: "query",
+    loadChildren: () => import("./query/query.module").then(m => m.QueryModule),
   },
   {
-    path: "extract-data-async-pipe",
-    component: AsyncFeedComponent,
+    path: "mutation",
+    loadChildren: () => import("./mutation/mutation.module").then(m => m.MutationModule),
   },
   {
-    path: "extract-data-rxjs",
-    component: RxjsFeedComponent,
-  },
-  {
-    path: "mutations",
-    component: NewEntryComponent,
-  },
-  {
-    path: "optimistic-response",
-    component: CommentPageComponent,
+    path: "services",
+    loadChildren: () => import("./graphql-services/graphql-services.module").then(m => m.GraphqlServicesModule),
   },
 ];
 

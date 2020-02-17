@@ -5,16 +5,24 @@
       <li><a routerLink="/basic" routerLinkActive="active">Basic</a></li>
       <li>Queries
         <ul>
-          <li><a routerLink="/queries" routerLinkActive="active">Basic</a></li>
-          <li><a routerLink="/extract-data-async-pipe" routerLinkActive="active">Data extraction using async pipe</a>
+          <li><a routerLink="/query/basic" routerLinkActive="active">Basic</a></li>
+          <li>Data extraction
+            <ul>
+              <li><a routerLink="/query/data-extract/async-pipe" routerLinkActive="active">Async pipe</a></li>
+              <li><a routerLink="/query/data-extract/rxjs" routerLinkActive="active">RxJS</a></li>
+            </ul>
           </li>
-          <li><a routerLink="/extract-data-rxjs" routerLinkActive="active">Data extraction using RxJS</a></li>
         </ul>
       </li>
       <li>Mutations
         <ul>
-          <li><a routerLink="/mutations" routerLinkActive="active">Basic</a></li>
-          <li><a routerLink="/optimistic-response" routerLinkActive="active">Optimistic repsonse</a></li>
+          <li><a routerLink="/mutation/basic" routerLinkActive="active">Basic</a></li>
+          <li><a routerLink="/mutation/optimistic-response" routerLinkActive="active">Optimistic response</a></li>
+        </ul>
+      </li>
+      <li>GraphQL services
+        <ul>
+          <li><a routerLink="/graphql-services/query" routerLinkActive="active">Queries</a></li>
         </ul>
       </li>
     </ul>

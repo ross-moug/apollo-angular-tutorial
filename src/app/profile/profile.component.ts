@@ -13,7 +13,6 @@ const CurrentUserForProfile = gql`
 `;
 
 @Component({
-  selector: "app-profile",
   templateUrl: "./profile.component.html",
 })
 export class ProfileComponent implements OnInit, OnDestroy {

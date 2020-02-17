@@ -7,7 +7,6 @@ interface ExchangeRates {
 }
 
 @Component({
-  selector: "app-exchange-rates",
   templateUrl: "./exchange-rates.component.html",
 })
 export class ExchangeRatesComponent implements OnInit {

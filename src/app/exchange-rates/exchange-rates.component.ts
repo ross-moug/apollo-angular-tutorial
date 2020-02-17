@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { Apollo } from "apollo-angular";
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
 interface ExchangeRates {
   rates: any[];
 }
 
 @Component({
-  selector: 'app-exchange-rates',
-  templateUrl: './exchange-rates.component.html',
+  selector: "app-exchange-rates",
+  templateUrl: "./exchange-rates.component.html",
 })
 export class ExchangeRatesComponent implements OnInit {
   rates: any[];

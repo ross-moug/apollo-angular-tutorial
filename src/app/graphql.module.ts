@@ -4,11 +4,11 @@ import { HttpLinkModule, HttpLink } from "apollo-angular-link-http";
 import { InMemoryCache, NormalizedCacheObject } from "apollo-cache-inmemory";
 import { ApolloClientOptions } from "apollo-client";
 
-const uri: string = "https://o5x5jzoo7z.sse.codesandbox.io/graphql"; // <-- add the URL of the GraphQL server here
+const uri = "https://o5x5jzoo7z.sse.codesandbox.io/graphql"; // <-- add the URL of the GraphQL server here
 export function createApollo(httpLink: HttpLink): ApolloClientOptions<NormalizedCacheObject> {
   return {
     link: httpLink.create({
-      uri: uri
+      uri,
     }),
     cache: new InMemoryCache(),
   };

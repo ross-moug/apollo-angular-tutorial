@@ -1,7 +1,9 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { ExchangeRatesComponent } from "./exchange-rates/exchange-rates.component";
+import { AsyncFeedComponent } from "./async-feed/async-feed.component";
 import { ProfileComponent } from "./profile/profile.component";
+import { RxjsFeedComponent } from "./rxjs-feed/rxjs-feed.component";
 
 const routes: Routes = [
   {
@@ -11,6 +13,14 @@ const routes: Routes = [
   {
     path: "queries",
     component: ProfileComponent,
+  },
+  {
+    path: "extract-data-async-pipe",
+    component: AsyncFeedComponent,
+  },
+  {
+    path: "extract-data-rxjs",
+    component: RxjsFeedComponent,
   },
 ];
 

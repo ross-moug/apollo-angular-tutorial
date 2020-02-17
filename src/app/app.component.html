@@ -1,4 +1,12 @@
 <div>
   <h2>Apollo Angular Tutorial 🚀</h2>
-  <app-exchange-rates></app-exchange-rates>
+  <nav>
+    <ul>
+      <li><a routerLink="/basic" routerLinkActive="active">Basic</a></li>
+      <li><a routerLink="/queries" routerLinkActive="active">Queries</a></li>
+    </ul>
+  </nav>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
 </div>

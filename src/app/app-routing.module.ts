@@ -1,6 +1,7 @@
 import { NewCommand } from "@angular/cli/commands/new-impl";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+import { CommentPageComponent } from "./comment-page/comment-page.component";
 import { ExchangeRatesComponent } from "./exchange-rates/exchange-rates.component";
 import { AsyncFeedComponent } from "./async-feed/async-feed.component";
 import { NewEntryComponent } from "./new-entry/new-entry.component";
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: "mutations",
     component: NewEntryComponent,
+  },
+  {
+    path: "optimistic-response",
+    component: CommentPageComponent,
   },
 ];
 

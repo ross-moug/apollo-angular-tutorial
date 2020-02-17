@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+import { CommentPageComponent } from "./comment-page/comment-page.component";
 import { ExchangeRatesComponent } from "./exchange-rates/exchange-rates.component";
 import { AsyncFeedComponent } from "./async-feed/async-feed.component";
 import { GraphQLModule } from "./graphql.module";
@@ -19,6 +20,7 @@ import { RxjsFeedComponent } from "./rxjs-feed/rxjs-feed.component";
     AsyncFeedComponent,
     RxjsFeedComponent,
     NewEntryComponent,
+    CommentPageComponent,
   ],
   imports: [
     BrowserModule,

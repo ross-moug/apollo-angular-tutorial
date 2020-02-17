@@ -7,6 +7,7 @@ import { ExchangeRatesComponent } from "./exchange-rates/exchange-rates.componen
 import { AsyncFeedComponent } from "./async-feed/async-feed.component";
 import { GraphQLModule } from "./graphql.module";
 import { HttpClientModule } from "@angular/common/http";
+import { NewEntryComponent } from "./new-entry/new-entry.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { RxjsFeedComponent } from "./rxjs-feed/rxjs-feed.component";
 
@@ -17,6 +18,7 @@ import { RxjsFeedComponent } from "./rxjs-feed/rxjs-feed.component";
     ProfileComponent,
     AsyncFeedComponent,
     RxjsFeedComponent,
+    NewEntryComponent,
   ],
   imports: [
     BrowserModule,

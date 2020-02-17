@@ -4,6 +4,13 @@ import gql from "graphql-tag";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 
+interface FeedResponse {
+  feed: {
+    createdAt: Date;
+    score: number;
+  };
+}
+
 const FeedQuery = gql`
   query Feed {
     currentUser {
@@ -27,7 +34,7 @@ export class RxjsFeedComponent implements OnInit {
 
   ngOnInit() {
     this.data = this.apollo
-      .watchQuery({ query: FeedQuery })
+      .watchQuery<FeedResponse>({ query: FeedQuery })
       .valueChanges.pipe(map(({ data }) => data.feed));
   }
 }

@@ -45,7 +45,14 @@ export function createApollo(httpLink: HttpLink): ApolloClientOptions<Normalized
 
   return {
     link: logoutLink.concat(from([authMiddleware, otherMiddleware, http])),
-    cache: new InMemoryCache(),
+    cache: new InMemoryCache({
+      dataIdFromObject: object => {
+        switch (object.__typename) {
+          case "post": return object.__typename;
+          default: return object.id;
+        }
+      }
+    }),
   };
 }
 

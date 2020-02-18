@@ -19,6 +19,10 @@ const routes: Routes = [
     path: "services",
     loadChildren: () => import("./graphql-services/graphql-services.module").then(m => m.GraphqlServicesModule),
   },
+  {
+    path: "caching",
+    loadChildren: () => import("./cache/cache.module").then(m => m.CacheModule),
+  },
 ];
 
 @NgModule({

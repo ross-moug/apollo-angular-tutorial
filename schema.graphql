@@ -1,0 +1,12 @@
+type Post implements Node {
+  id: ID!
+  title: String!
+}
+
+interface Node {
+  id: ID!
+}
+
+type Query {
+  posts: [Post]!
+}

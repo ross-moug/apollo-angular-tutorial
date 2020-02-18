@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { ActivityComponent } from "./activity/activity.component";
+import { CodegenListComponent } from "./codegen-list/codegen-list.component";
 import { ListComponent } from "./list/list.component";
 import { UpvoterComponent } from "./upvoter/upvoter.component";
 
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: "subscription",
     component: ActivityComponent,
+  },
+  {
+    path: "code-gen",
+    component: CodegenListComponent,
   }
 ];
 

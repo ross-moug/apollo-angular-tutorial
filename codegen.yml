@@ -1,0 +1,17 @@
+overwrite: true
+schema: "schema.graphql"
+generates:
+  src/generated/resolvers-types.ts:
+    plugins:
+      - typescript
+      - typescript-resolvers
+    config:
+      noSchemaStitching: true
+  src/generated/graphql.ts:
+    documents: src/**/*.graphql
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-apollo-angular
+config:
+  immutableTypes: true
